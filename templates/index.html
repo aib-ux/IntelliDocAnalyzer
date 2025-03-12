@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Upload Document</h5>
+            </div>
+            <div class="card-body">
+                <form id="uploadForm" class="mb-3">
+                    <div class="mb-3">
+                        <label for="documentFile" class="form-label">Choose a file (PDF, DOCX, or Image)</label>
+                        <input type="file" class="form-control" id="documentFile" accept=".pdf,.docx,.png,.jpg,.jpeg" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                        Upload and Process
+                    </button>
+                </form>
+                <div id="uploadError" class="alert alert-danger d-none"></div>
+            </div>
+        </div>
+
+        <div id="questionSection" class="card mb-4 d-none">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Ask Questions</h5>
+            </div>
+            <div class="card-body">
+                <form id="questionForm">
+                    <div class="mb-3">
+                        <label for="question" class="form-label">Your Question</label>
+                        <input type="text" class="form-control" id="question" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                        Ask
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div id="answerSection" class="card d-none">
+            <div class="card-header">
+                <h5 class="card-title mb-0">Answer</h5>
+            </div>
+            <div class="card-body">
+                <div id="answer" class="answer-text"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
