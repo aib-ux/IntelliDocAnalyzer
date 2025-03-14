@@ -5,3 +5,4 @@ gunicorn
 Pillow
 pytesseract
 python-docx
+openai
