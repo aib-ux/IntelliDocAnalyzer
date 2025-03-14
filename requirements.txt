@@ -3,3 +3,4 @@ werkzeug
 PyPDF2 
 gunicorn
 Pillow
+pytesseract
